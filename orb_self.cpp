@@ -366,9 +366,9 @@ int ORB_pattern[256 * 4] = {
          for (int i = 0; i < 8; ++i) {
              uint32_t d = 0;
              for (int k = 0; k < 32; ++k) {
-                 int idx_pd = i * 32 + k;
-                 cv::Point2f p(ORB_pattern[idx_pd * 4], ORB_pattern[idx_pd * 4 + 1]);
-                 cv::Point2f q(ORB_pattern[idx_pd * 4 + 2], ORB_pattern[idx_pd * 4 + 3]);
+                 int idx_pq = i * 32 + k;
+                 cv::Point2f p(ORB_pattern[idx_pq * 4], ORB_pattern[idx_pq * 4 + 1]);
+                 cv::Point2f q(ORB_pattern[idx_pq * 4 + 2], ORB_pattern[idx_pq * 4 + 3]);
 
                  // rotate with theta
                  cv::Point2f pp = cv::Point2f(cos_theta * p.x - sin_theta * p.y, sin_theta * p.x + cos_theta * p.y) + kp.pt;
