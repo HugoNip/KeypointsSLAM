@@ -32,8 +32,8 @@ inline cv::Scalar get_color(float depth) {
 cv::Point2f pixel2cam(const cv::Point2d &p, const cv::Mat &K);
 
 // global variables
-std::string first_file = "../data/1.png";
-std::string second_file = "../data/2.png";
+std::string first_file = "./data/1.png";
+std::string second_file = "./data/2.png";
 
 int main (int argc, char** argv) {
     // load images
