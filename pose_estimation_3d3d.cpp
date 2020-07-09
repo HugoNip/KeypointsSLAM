@@ -90,10 +90,10 @@ protected:
 };
 
 // global variables
-std::string first_file = "../data/1.png";
-std::string second_file = "../data/2.png";
-std::string depth_first_file = "../data/1_depth.png";
-std::string depth_second_file = "../data/2_depth.png";
+std::string first_file = "./data/1.png";
+std::string second_file = "./data/2.png";
+std::string depth_first_file = "./data/1_depth.png";
+std::string depth_second_file = "./data/2_depth.png";
 
 int main(int argc, char** argv) {
     // load images
