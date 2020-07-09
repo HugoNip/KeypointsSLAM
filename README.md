@@ -1,6 +1,8 @@
 ## Introduction
 This project shows how to use matching keypoints to estimate pose of camera.
+
 ## Requirements
+
 ### OpenCV
 #### Required Packages
 OpenCV  
@@ -55,8 +57,8 @@ make
 ## Run
 ### Keypoint Matching by using ORB features
 ```
-./orb_cv // OpenCV
-./orb_self // Craft
+./build/orb_cv
+./build/orb_self
 ```
 #### ORB Keypoints
 ![ORB_features.png](https://github.com/HugoNip/KeypointsSLAM/blob/master/results/ORB_features.png)
@@ -69,16 +71,16 @@ make
 
 ### Pose Estimation by using 2d-2d Keypoints
 ```
-./pose_estimation_2d2d
+./build/pose_estimation_2d2d
 ```
 ### Pose Estimation by using 3d-2d Keypoints
 ```
-./pose_estimation_3d2d
+./build/pose_estimation_3d2d
 ```
 
 ### Pose Estimation by using 3d-3d Keypoints
 ```
-./pose_estimation_3d3d
+./build/pose_estimation_3d3d
 ```
 
 ## Reference
