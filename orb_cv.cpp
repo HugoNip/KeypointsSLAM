@@ -4,8 +4,8 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <chrono>
 
-std::string image_file1 = "../data/1.png";
-std::string image_file2 = "../data/2.png";
+std::string image_file1 = "./data/1.png";
+std::string image_file2 = "./data/2.png";
 
 int main (int argc, char** argv) {
     // Read images
@@ -35,7 +35,7 @@ int main (int argc, char** argv) {
     cv::Mat outimg1;
     cv::drawKeypoints(img_1, keypoints_1, outimg1, cv::Scalar::all(-1), cv::DrawMatchesFlags::DEFAULT);
     cv::imshow("ORB features", outimg1);
-    cv::imwrite("../results/ORB_features.png", outimg1);
+    cv::imwrite("./results/ORB_features.png", outimg1);
 
     // step3: matching keypoints, using Hamming distance
     std::vector<cv::DMatch> matches;
@@ -69,9 +69,9 @@ int main (int argc, char** argv) {
     cv::drawMatches(img_1, keypoints_1, img_2, keypoints_2, matches, img_match);
     cv::drawMatches(img_1, keypoints_1, img_2, keypoints_2, good_matches, img_goodmatch);
     cv::imshow("all matches", img_match);
-    cv::imwrite("../results/all_matches.png", img_match);
+    cv::imwrite("./results/all_matches.png", img_match);
     cv::imshow("good matches", img_goodmatch);
-    cv::imwrite("../results/good_matches.png", img_goodmatch);
+    cv::imwrite("./results/good_matches.png", img_goodmatch);
     cv::waitKey(0);
 
     /*
