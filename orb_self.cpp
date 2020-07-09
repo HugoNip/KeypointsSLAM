@@ -4,8 +4,8 @@
 #include <chrono>
 
 // global variables
-std::string first_file = "../data/1.png";
-std::string second_file = "../data/2.png";
+std::string first_file = "./data/1.png";
+std::string second_file = "./data/2.png";
 
 // 32 bit unsigned int, will have 8, 8x32 = 256
 typedef std::vector<uint32_t> DescType; // Descriptor type
@@ -66,7 +66,7 @@ void ComputeORB(const cv::Mat &img, std::vector<cv::KeyPoint> &keypoints, std::v
      cv::Mat image_show;
      cv::drawMatches(first_image, keypoints1, second_image, keypoints2, matches, image_show);
      cv::imshow("matches", image_show);
-     cv::imwrite("../results/matches.png", image_show);
+     cv::imwrite("./results/matches.png", image_show);
      cv::waitKey(0);
 
      std::cout << "done." << std::endl;
